@@ -1,4 +1,4 @@
-[![banner](https://particles.js.org/images/banner2.png)](https://particles.js.org)
+[![banner](https://particles.js.org/images/banner3.png)](https://particles.js.org)
 
 # tsParticles - TypeScript Particles
 
@@ -75,7 +75,7 @@ const tsParticles = require("tsparticles");
 
 // atau
 
-import {tsParticles} from "tsparticles";
+import {tsParticles} from "tsparticles-engine";
 ```
 
 `tsParticles` yang di muat berasal dari instance yang sama ketika kamu memanggil script nya.
@@ -264,7 +264,7 @@ dengan template keren mu, Kamu akan dikreditkan sebagai pembuat template!
 
 <https://particles.js.org/samples>
 
-[![Particles demo](https://particles.js.org/images/demo.png?v=1.8.1)](https://particles.js.org/samples)
+[![Particles demo](https://particles.js.org/images/demo2.png?v=1.39.1)](https://particles.js.org/samples)
 
 ---
 

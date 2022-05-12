@@ -1,4 +1,4 @@
-[![banner](https://particles.js.org/images/banner2.png)](https://particles.js.org)
+[![banner](https://particles.js.org/images/banner3.png)](https://particles.js.org)
 
 # tsParticles - Частицы на TypeScript
 
@@ -71,7 +71,7 @@ const tsParticles = require("tsparticles");
 
 // или
 
-import {tsParticles} from "tsparticles";
+import {tsParticles} from "tsparticles-engine";
 ```
 
 Загруженная сущность `tsParticles` является абсолютной копией кода, вызываемого при включении через скрипт.
@@ -260,7 +260,7 @@ particles.pause();
 
 <https://particles.js.org/samples>
 
-[![Демо частиц](https://particles.js.org/images/demo.png?v=1.8.1)](https://particles.js.org/samples)
+[![Демо частиц](https://particles.js.org/images/demo2.png?v=1.39.1)](https://particles.js.org/samples)
 
 ---
 

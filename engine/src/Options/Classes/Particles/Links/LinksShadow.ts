@@ -1,7 +1,7 @@
 import type { ILinksShadow } from "../../../Interfaces/Particles/Links/ILinksShadow";
-import type { RecursivePartial } from "../../../../Types";
-import { OptionsColor } from "../../OptionsColor";
 import type { IOptionLoader } from "../../../Interfaces/IOptionLoader";
+import { OptionsColor } from "../../OptionsColor";
+import type { RecursivePartial } from "../../../../Types/RecursivePartial";
 
 /**
  * @category Options
@@ -14,13 +14,12 @@ export class LinksShadow implements ILinksShadow, IOptionLoader<ILinksShadow> {
     constructor() {
         this.blur = 5;
         this.color = new OptionsColor();
+        this.color.value = "#000";
         this.enable = false;
-
-        this.color.value = "#00ff00";
     }
 
     load(data?: RecursivePartial<ILinksShadow>): void {
-        if (data === undefined) {
+        if (!data) {
             return;
         }
 

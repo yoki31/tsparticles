@@ -1,4 +1,4 @@
-[![banner](https://particles.js.org/images/banner2.png)](https://particles.js.org)
+[![banner](https://particles.js.org/images/banner3.png)](https://particles.js.org)
 
 # tsParticles - TypeScript Particles
 
@@ -70,7 +70,7 @@ const tsParticles = require("tsparticles");
 
 // or
 
-import {tsParticles} from "tsparticles";
+import {tsParticles} from "tsparticles-engine";
 ```
 
 आयात किया हुआ `tsParticles` स्क्रिप्ट सहित जब आपके पास वही उदाहरण है।
@@ -252,7 +252,7 @@ https) : //img.shields.io/npm/dm/svelte-particles)] (https://www.npmjs.com/packa
 
 <Https://particles.js.org/samples>
 
-[![Particles demo](https://particles.js.org/images/demo.png?v=1.8.1)](https://particles.js.org/samples)
+[![Particles demo](https://particles.js.org/images/demo2.png?v=1.39.1)](https://particles.js.org/samples)
 
 
 ---

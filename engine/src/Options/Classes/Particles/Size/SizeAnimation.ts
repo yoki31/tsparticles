@@ -1,8 +1,9 @@
-import type { ISizeAnimation } from "../../../Interfaces/Particles/Size/ISizeAnimation";
-import type { RecursivePartial } from "../../../../Types";
-import { DestroyType, StartValueType } from "../../../../Enums";
-import type { IOptionLoader } from "../../../Interfaces/IOptionLoader";
 import { AnimationOptions } from "../../AnimationOptions";
+import { DestroyType } from "../../../../Enums/Types/DestroyType";
+import type { IOptionLoader } from "../../../Interfaces/IOptionLoader";
+import type { ISizeAnimation } from "../../../Interfaces/Particles/Size/ISizeAnimation";
+import type { RecursivePartial } from "../../../../Types/RecursivePartial";
+import { StartValueType } from "../../../../Enums/Types/StartValueType";
 
 /**
  * @category Options
@@ -45,11 +46,11 @@ export class SizeAnimation extends AnimationOptions implements ISizeAnimation, I
     }
 
     load(data?: RecursivePartial<ISizeAnimation>): void {
-        if (data === undefined) {
+        super.load(data);
+
+        if (!data) {
             return;
         }
-
-        super.load(data);
 
         if (data.destroy !== undefined) {
             this.destroy = data.destroy;

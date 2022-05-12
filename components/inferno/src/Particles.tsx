@@ -1,6 +1,6 @@
 import { Component, InfernoNode } from "inferno";
 import equal from "fast-deep-equal/react";
-import { tsParticles, Container } from "tsparticles";
+import { tsParticles, Container } from "tsparticles-engine";
 import type { IParticlesProps } from "./IParticlesProps";
 import type { IParticlesState } from "./IParticlesState";
 
@@ -27,6 +27,7 @@ export default class Particles extends Component<
 		super(props);
 
 		this.state = {
+			init: false,
 			library: undefined,
 		};
 	}
@@ -52,17 +53,26 @@ export default class Particles extends Component<
 	}
 
 	forceUpdate(): void {
-		this.refresh();
-
-		super.forceUpdate();
+		this.refresh().then(() => {
+			super.forceUpdate();
+		});
 	}
 
 	componentDidMount(): void {
-		if (this.props.init) {
-			this.props.init(tsParticles);
-		}
+		(async () => {
+			if (this.props.init) {
+				await this.props.init(tsParticles);
+			}
 
-		this.loadParticles();
+			this.setState(
+				{
+					init: true,
+				},
+				async () => {
+					await this.loadParticles();
+				}
+			);
+		})();
 	}
 
 	componentWillUnmount(): void {
@@ -86,14 +96,18 @@ export default class Particles extends Component<
 		);
 	}
 
-	private refresh(): void {
+	private async refresh(): Promise<void> {
 		this.destroy();
 
-		this.loadParticles();
+		await this.loadParticles();
 	}
 
-	private loadParticles(): void {
-		const cb = (container?: Container) => {
+	private async loadParticles(): Promise<void> {
+		if (!this.state.init) {
+			return;
+		}
+
+		const cb = async (container?: Container) => {
 			if (this.props.container) {
 				(this.props.container as MutableRefObject<Container>).current =
 					container;
@@ -104,16 +118,17 @@ export default class Particles extends Component<
 			});
 
 			if (this.props.loaded) {
-				this.props.loaded(container);
+				await this.props.loaded(container);
 			}
 		};
 
-		if (this.props.url) {
-			tsParticles.loadJSON(this.props.id, this.props.url).then(cb);
-		} else {
-			tsParticles
-				.load(this.props.id, this.props.params ?? this.props.options)
-				.then(cb);
-		}
+		const container = await (this.props.url
+			? tsParticles.loadJSON(this.props.id, this.props.url)
+			: tsParticles.load(
+					this.props.id,
+					this.props.params ?? this.props.options
+			  ));
+
+		await cb(container);
 	}
 }

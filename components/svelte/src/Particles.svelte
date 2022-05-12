@@ -1,54 +1,64 @@
 <script lang="ts">
-  import { afterUpdate, createEventDispatcher } from "svelte";
-  import { Container, tsParticles } from "tsparticles";
+    import { afterUpdate, createEventDispatcher } from "svelte";
+    import type { ISourceOptions } from "tsparticles-engine";
+    import { tsParticles } from "tsparticles-engine";
 
-  export let options = {};
-  export let url = "";
-  export let id = "tsparticles";
+    export let options: ISourceOptions = {};
+    export let url = "";
+    export let id = "tsparticles";
+    export let particlesInit;
 
-  const dispatch = createEventDispatcher();
-  const particlesInitEvent = "particlesInit";
-  const particlesLoadedEvent = "particlesLoaded";
+    const dispatch = createEventDispatcher();
 
-  let oldId = id;
+    const particlesLoadedEvent = "particlesLoaded";
 
-  afterUpdate(() => {
-    tsParticles.init();
+    let oldId = id;
 
-    dispatch(particlesInitEvent, tsParticles);
+    afterUpdate(async () => {
+        tsParticles.init();
 
-    if (oldId) {
-      const oldContainer = tsParticles.dom().find((c) => c.id === oldId);
+        if (particlesInit) {
+            await particlesInit(tsParticles);
+        }
 
-      if (oldContainer) {
-        oldContainer.destroy();
-      }
-    }
+        if (oldId) {
+            const oldContainer = tsParticles.dom().find((c) => c.id === oldId);
 
-    if (id) {
-      const cb = (container) => {
-        dispatch(particlesLoadedEvent, {
-          particles: container,
-        });
+            if (oldContainer) {
+                oldContainer.destroy();
+            }
+        }
 
-        oldId = id;
-      };
+        if (id) {
+            const cb = (container) => {
+                dispatch(particlesLoadedEvent, {
+                    particles: container,
+                });
 
-      if (url) {
-        tsParticles.loadJSON(id, url).then(cb);
-      } else if (options) {
-        tsParticles.load(id, options).then(cb);
-      } else {
-        console.error("You must specify options or url to load tsParticles");
-      }
-    } else {
-      dispatch(particlesLoadedEvent, {
-        particles: undefined,
-      });
-    }
-  });
+                oldId = id;
+            };
+
+            let container;
+
+            if (url) {
+                container = await tsParticles.loadJSON(id, url);
+            } else if (options) {
+                container = await tsParticles.load(id, options);
+            } else {
+                console.error("You must specify options or url to load tsParticles");
+
+                return;
+            }
+
+            cb(container);
+        } else {
+            dispatch(particlesLoadedEvent, {
+                particles: undefined,
+            });
+        }
+    });
 </script>
 
-<svelte:options accessors={true} />
+<svelte:options accessors={true}/>
 
-<div {id} />
+<div {id}></div>

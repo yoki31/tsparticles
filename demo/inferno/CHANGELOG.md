@@ -3,6 +3,329 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.6](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@2.0.5...inferno-particles-demo@2.0.6) (2022-04-16)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+## [2.0.5](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@2.0.4...inferno-particles-demo@2.0.5) (2022-04-14)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+## [2.0.4](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.26.1...inferno-particles-demo@2.0.4) (2022-04-06)
+
+
+### Features
+
+* added init state to react, preact and inferno components ([2fbc361](https://github.com/matteobruni/tsparticles/commit/2fbc361060d58db48faa6836b249e704e0b04e04))
+* splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
+
+
+
+
+
+## [2.0.3](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.25.1...inferno-particles-demo@2.0.3) (2022-03-11)
+
+
+### Features
+
+* added init state to react, preact and inferno components ([2fbc361](https://github.com/matteobruni/tsparticles/commit/2fbc361060d58db48faa6836b249e704e0b04e04))
+* splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
+
+
+
+
+
+## [2.0.2](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.24.4...inferno-particles-demo@2.0.2) (2022-02-21)
+
+
+### Features
+
+* added init state to react, preact and inferno components ([2fbc361](https://github.com/matteobruni/tsparticles/commit/2fbc361060d58db48faa6836b249e704e0b04e04))
+* splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
+## [1.26.1](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.26.0...inferno-particles-demo@1.26.1) (2022-04-06)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+# [1.26.0](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.25.4...inferno-particles-demo@1.26.0) (2022-04-04)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+## [1.25.4](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.25.3...inferno-particles-demo@1.25.4) (2022-03-20)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+## [1.25.3](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.25.2...inferno-particles-demo@1.25.3) (2022-03-18)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+## [1.25.2](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.25.1...inferno-particles-demo@1.25.2) (2022-03-14)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+## [1.25.1](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.25.0...inferno-particles-demo@1.25.1) (2022-03-09)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+# [1.25.0](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.24.6...inferno-particles-demo@1.25.0) (2022-03-08)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+## [1.24.6](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.24.5...inferno-particles-demo@1.24.6) (2022-03-03)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+## [1.24.5](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.24.4...inferno-particles-demo@1.24.5) (2022-02-24)
+
+
+### Bug Fixes
+
+* fixed emitters issues ([c9d9a51](https://github.com/matteobruni/tsparticles/commit/c9d9a51e41fdc77a9bf544a09d979d8c2f6b10d5))
+
+
+
+
+
+## [2.0.1](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@2.0.0...inferno-particles-demo@2.0.1) (2022-02-15)
+## [1.24.2](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.24.1...inferno-particles-demo@1.24.2) (2022-02-16)
+## [1.24.4](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.24.3...inferno-particles-demo@1.24.4) (2022-02-20)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+## [1.24.3](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.24.2...inferno-particles-demo@1.24.3) (2022-02-19)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+# [2.0.0](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.24.1...inferno-particles-demo@2.0.0) (2022-02-15)
+
+
+### Features
+
+* added init state to react, preact and inferno components ([2fbc361](https://github.com/matteobruni/tsparticles/commit/2fbc361060d58db48faa6836b249e704e0b04e04))
+* splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
+
+
+
+
+
+# [2.0.0-beta.5](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.22.2...inferno-particles-demo@2.0.0-beta.5) (2022-01-30)
+
+
+### Features
+
+* added init state to react, preact and inferno components ([2fbc361](https://github.com/matteobruni/tsparticles/commit/2fbc361060d58db48faa6836b249e704e0b04e04))
+* splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
+## [1.24.1](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.24.0...inferno-particles-demo@1.24.1) (2022-02-14)
+
+
+### Bug Fixes
+
+* upgrade inferno from 7.4.9 to 7.4.11 ([29f7229](https://github.com/matteobruni/tsparticles/commit/29f7229192fc522accb8258d2b5905c90e38e421))
+
+
+
+
+
+# [1.24.0](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.23.2...inferno-particles-demo@1.24.0) (2022-02-10)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+## [1.23.2](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.23.1...inferno-particles-demo@1.23.2) (2022-02-07)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+## [1.23.1](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.23.0...inferno-particles-demo@1.23.1) (2022-02-06)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+# [1.23.0](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.22.3...inferno-particles-demo@1.23.0) (2022-02-04)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+# [2.0.0-beta.4](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@2.0.0-beta.3...inferno-particles-demo@2.0.0-beta.4) (2021-12-07)
+## [1.22.3](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.22.2...inferno-particles-demo@1.22.3) (2022-02-02)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+## [1.22.2](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.22.1...inferno-particles-demo@1.22.2) (2022-01-29)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+## [1.22.1](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.22.0...inferno-particles-demo@1.22.1) (2022-01-26)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+# [1.22.0](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.21.0...inferno-particles-demo@1.22.0) (2022-01-08)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+# [1.21.0](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.20.6...inferno-particles-demo@1.21.0) (2021-12-29)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+## [1.20.6](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.20.5...inferno-particles-demo@1.20.6) (2021-12-24)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+# [2.0.0-beta.3](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.20.5...inferno-particles-demo@2.0.0-beta.3) (2021-12-04)
+
+
+### Features
+
+* added init state to react, preact and inferno components ([2fbc361](https://github.com/matteobruni/tsparticles/commit/2fbc361060d58db48faa6836b249e704e0b04e04))
+* splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
+
+
+
+
+
+# [2.0.0-beta.2](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.18.4...inferno-particles-demo@2.0.0-beta.2) (2021-10-06)
+
+
+### Features
+
+* splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
+
+
+
+
+
+# [2.0.0-beta.1](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@2.0.0-beta.0...inferno-particles-demo@2.0.0-beta.1) (2021-10-06)
+## [1.20.5](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.20.4...inferno-particles-demo@1.20.5) (2021-11-28)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+## [1.20.4](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.20.3...inferno-particles-demo@1.20.4) (2021-11-17)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+## [1.20.3](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.20.2...inferno-particles-demo@1.20.3) (2021-11-05)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+## [1.20.2](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.20.1...inferno-particles-demo@1.20.2) (2021-10-31)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+## [1.20.1](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.20.0...inferno-particles-demo@1.20.1) (2021-10-30)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+# [1.20.0](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.19.0...inferno-particles-demo@1.20.0) (2021-10-28)
+
+**Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
 # [1.19.0](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.18.4...inferno-particles-demo@1.19.0) (2021-10-14)
 
 **Note:** Version bump only for package inferno-particles-demo
@@ -14,6 +337,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## [1.18.4](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.18.3...inferno-particles-demo@1.18.4) (2021-10-06)
 
 **Note:** Version bump only for package inferno-particles-demo
+
+
+
+
+
+# [2.0.0-beta.0](https://github.com/matteobruni/tsparticles/compare/inferno-particles-demo@1.18.3...inferno-particles-demo@2.0.0-beta.0) (2021-10-06)
+
+
+### Features
+
+* splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
 
 
 

@@ -1,7 +1,9 @@
-import type { ITwinkleValues } from "../../../Interfaces/Particles/Twinkle/ITwinkleValues";
-import type { RecursivePartial } from "../../../../Types";
-import { OptionsColor } from "../../OptionsColor";
 import type { IOptionLoader } from "../../../Interfaces/IOptionLoader";
+import type { ITwinkleValues } from "../../../Interfaces/Particles/Twinkle/ITwinkleValues";
+import { OptionsColor } from "../../OptionsColor";
+import type { RangeValue } from "../../../../Types/RangeValue";
+import type { RecursivePartial } from "../../../../Types/RecursivePartial";
+import { setRangeValue } from "../../../../Utils/NumberUtils";
 
 /**
  * @category Options
@@ -10,7 +12,7 @@ export class TwinkleValues implements ITwinkleValues, IOptionLoader<ITwinkleValu
     color?: OptionsColor;
     enable;
     frequency;
-    opacity;
+    opacity: RangeValue;
 
     constructor() {
         this.enable = false;
@@ -19,7 +21,7 @@ export class TwinkleValues implements ITwinkleValues, IOptionLoader<ITwinkleValu
     }
 
     load(data?: RecursivePartial<ITwinkleValues>): void {
-        if (data === undefined) {
+        if (!data) {
             return;
         }
 
@@ -36,7 +38,7 @@ export class TwinkleValues implements ITwinkleValues, IOptionLoader<ITwinkleValu
         }
 
         if (data.opacity !== undefined) {
-            this.opacity = data.opacity;
+            this.opacity = setRangeValue(data.opacity);
         }
     }
 }

@@ -1,6 +1,6 @@
-import type { ISlow } from "../../../Interfaces/Interactivity/Modes/ISlow";
-import type { RecursivePartial } from "../../../../Types";
 import type { IOptionLoader } from "../../../Interfaces/IOptionLoader";
+import type { ISlow } from "../../../Interfaces/Interactivity/Modes/ISlow";
+import type { RecursivePartial } from "../../../../Types/RecursivePartial";
 
 /**
  * @category Options
@@ -29,7 +29,7 @@ export class Slow implements ISlow, IOptionLoader<ISlow> {
     }
 
     load(data?: RecursivePartial<ISlow>): void {
-        if (data === undefined) {
+        if (!data) {
             return;
         }
 

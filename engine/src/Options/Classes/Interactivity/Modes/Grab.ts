@@ -1,7 +1,7 @@
-import type { IGrab } from "../../../Interfaces/Interactivity/Modes/IGrab";
 import { GrabLinks } from "./GrabLinks";
-import type { RecursivePartial } from "../../../../Types";
+import type { IGrab } from "../../../Interfaces/Interactivity/Modes/IGrab";
 import type { IOptionLoader } from "../../../Interfaces/IOptionLoader";
+import type { RecursivePartial } from "../../../../Types/RecursivePartial";
 
 /**
  * @category Options
@@ -50,7 +50,7 @@ export class Grab implements IGrab, IOptionLoader<IGrab> {
     }
 
     load(data?: RecursivePartial<IGrab>): void {
-        if (data === undefined) {
+        if (!data) {
             return;
         }
 

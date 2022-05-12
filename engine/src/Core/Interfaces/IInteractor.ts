@@ -1,5 +1,5 @@
+import type { InteractorType } from "../../Enums/Types/InteractorType";
 import type { Particle } from "../Particle";
-import type { InteractorType } from "../../Enums";
 
 /**
  * @category Interfaces

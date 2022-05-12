@@ -1,16 +1,16 @@
-import type { ISplit } from "../../../Interfaces/Particles/Destroy/ISplit";
 import type { IOptionLoader } from "../../../Interfaces/IOptionLoader";
+import { IParticlesOptions } from "../../../Interfaces/Particles/IParticlesOptions";
+import type { ISplit } from "../../../Interfaces/Particles/Destroy/ISplit";
+import { RecursivePartial } from "../../../../Types/RecursivePartial";
 import { SplitFactor } from "./SplitFactor";
-import { RecursivePartial } from "../../../../Types";
 import { SplitRate } from "./SplitRate";
-import { IParticles } from "../../../Interfaces/Particles/IParticles";
-import { deepExtend } from "../../../../Utils";
+import { deepExtend } from "../../../../Utils/Utils";
 
 export class Split implements ISplit, IOptionLoader<ISplit> {
     count: number;
     factor: SplitFactor;
     rate: SplitRate;
-    particles?: RecursivePartial<IParticles>;
+    particles?: RecursivePartial<IParticlesOptions>;
     sizeOffset: boolean;
 
     constructor() {
@@ -33,7 +33,7 @@ export class Split implements ISplit, IOptionLoader<ISplit> {
         this.rate.load(data.rate);
 
         if (data.particles !== undefined) {
-            this.particles = deepExtend({}, data.particles) as RecursivePartial<IParticles>;
+            this.particles = deepExtend({}, data.particles) as RecursivePartial<IParticlesOptions>;
         }
 
         if (data.sizeOffset !== undefined) {

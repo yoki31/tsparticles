@@ -1,4 +1,4 @@
-[![banner](https://particles.js.org/images/banner2.png)](https://particles.js.org)
+[![banner](https://particles.js.org/images/banner3.png)](https://particles.js.org)
 
 # tsParticles - Deeltjes in TypeScript
 
@@ -73,7 +73,7 @@ const tsParticles = require("tsparticles");
 
 // of
 
-import {tsParticles} from "tsparticles";
+import {tsParticles} from "tsparticles-engine";
 ```
 
 De geïmporteerde `tsParticles` is dezelfde instantie als wanneer je het script had gebruikt van een CDN.
@@ -262,7 +262,7 @@ gecrediteerd als de auteur.
 
 <https://particles.js.org/samples>
 
-[![Particles demo](https://particles.js.org/images/demo.png?v=1.8.1)](https://particles.js.org/samples)
+[![Particles demo](https://particles.js.org/images/demo2.png?v=1.39.1)](https://particles.js.org/samples)
 
 ---
 

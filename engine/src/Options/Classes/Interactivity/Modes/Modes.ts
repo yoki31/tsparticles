@@ -1,17 +1,17 @@
-import type { IModes } from "../../../Interfaces/Interactivity/Modes/IModes";
+import { Attract } from "./Attract";
+import { Bounce } from "./Bounce";
 import { Bubble } from "./Bubble";
 import { Connect } from "./Connect";
 import { Grab } from "./Grab";
-import { Remove } from "./Remove";
+import type { IModes } from "../../../Interfaces/Interactivity/Modes/IModes";
+import type { IOptionLoader } from "../../../Interfaces/IOptionLoader";
+import { Light } from "./Light";
 import { Push } from "./Push";
+import type { RecursivePartial } from "../../../../Types/RecursivePartial";
+import { Remove } from "./Remove";
 import { Repulse } from "./Repulse";
 import { Slow } from "./Slow";
-import type { RecursivePartial } from "../../../../Types";
 import { Trail } from "./Trail";
-import type { IOptionLoader } from "../../../Interfaces/IOptionLoader";
-import { Attract } from "./Attract";
-import { Light } from "./Light";
-import { Bounce } from "./Bounce";
 
 /**
  * [[include:Options/Interactivity/Modes.md]]
@@ -45,7 +45,7 @@ export class Modes implements IModes, IOptionLoader<IModes> {
     }
 
     load(data?: RecursivePartial<IModes>): void {
-        if (data === undefined) {
+        if (!data) {
             return;
         }
 

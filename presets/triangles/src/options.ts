@@ -1,11 +1,8 @@
-import type { ISourceOptions } from "tsparticles";
+import type { ISourceOptions } from "tsparticles-engine";
 
 export const options: ISourceOptions = {
     background: {
         color: "#000000",
-    },
-    fullScreen: {
-        enable: true,
     },
     particles: {
         links: {

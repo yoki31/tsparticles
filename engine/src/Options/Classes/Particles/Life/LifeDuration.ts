@@ -1,6 +1,6 @@
 import type { ILifeDuration } from "../../../Interfaces/Particles/Life/ILifeDuration";
 import type { IOptionLoader } from "../../../Interfaces/IOptionLoader";
-import type { RecursivePartial } from "../../../../Types";
+import type { RecursivePartial } from "../../../../Types/RecursivePartial";
 import { ValueWithRandom } from "../../ValueWithRandom";
 
 export class LifeDuration extends ValueWithRandom implements ILifeDuration, IOptionLoader<ILifeDuration> {
@@ -13,7 +13,7 @@ export class LifeDuration extends ValueWithRandom implements ILifeDuration, IOpt
     }
 
     load(data?: RecursivePartial<ILifeDuration>): void {
-        if (data === undefined) {
+        if (!data) {
             return;
         }
 

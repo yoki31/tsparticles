@@ -1,11 +1,13 @@
 import type { IBubbleBase } from "../../../Interfaces/Interactivity/Modes/IBubbleBase";
-import type { RecursivePartial, SingleOrMultiple } from "../../../../Types";
+import type { IOptionLoader } from "../../../Interfaces/IOptionLoader";
 import { OptionsColor } from "../../OptionsColor";
+import type { RecursivePartial } from "../../../../Types/RecursivePartial";
+import type { SingleOrMultiple } from "../../../../Types/SingleOrMultiple";
 
 /**
  * @category Options
  */
-export abstract class BubbleBase implements IBubbleBase {
+export abstract class BubbleBase implements IBubbleBase, IOptionLoader<IBubbleBase> {
     distance;
     duration;
     mix;
@@ -20,7 +22,7 @@ export abstract class BubbleBase implements IBubbleBase {
     }
 
     load(data?: RecursivePartial<IBubbleBase>): void {
-        if (data === undefined) {
+        if (!data) {
             return;
         }
 

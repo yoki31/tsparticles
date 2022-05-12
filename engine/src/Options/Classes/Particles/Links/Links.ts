@@ -1,9 +1,9 @@
 import type { ILinks } from "../../../Interfaces/Particles/Links/ILinks";
+import type { IOptionLoader } from "../../../Interfaces/IOptionLoader";
 import { LinksShadow } from "./LinksShadow";
-import type { RecursivePartial } from "../../../../Types";
 import { LinksTriangle } from "./LinksTriangle";
 import { OptionsColor } from "../../OptionsColor";
-import type { IOptionLoader } from "../../../Interfaces/IOptionLoader";
+import type { RecursivePartial } from "../../../../Types/RecursivePartial";
 
 /**
  * [[include:Options/Particles/Links.md]]
@@ -26,6 +26,7 @@ export class Links implements ILinks, IOptionLoader<ILinks> {
     constructor() {
         this.blink = false;
         this.color = new OptionsColor();
+        this.color.value = "#fff";
         this.consent = false;
         this.distance = 100;
         this.enable = false;
@@ -38,7 +39,7 @@ export class Links implements ILinks, IOptionLoader<ILinks> {
     }
 
     load(data?: RecursivePartial<ILinks>): void {
-        if (data === undefined) {
+        if (!data) {
             return;
         }
 

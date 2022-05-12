@@ -1,4 +1,4 @@
-[![banner](https://particles.js.org/images/banner2.png)](https://particles.js.org)
+[![banner](https://particles.js.org/images/banner3.png)](https://particles.js.org)
 
 # inferno-particles
 
@@ -6,16 +6,20 @@
 
 Official [tsParticles](https://github.com/matteobruni/tsparticles) Inferno component
 
+[![Slack](https://particles.js.org/images/slack.png)](https://join.slack.com/t/tsparticles/shared_invite/enQtOTcxNTQxNjQ4NzkxLWE2MTZhZWExMWRmOWI5MTMxNjczOGE1Yjk0MjViYjdkYTUzODM3OTc5MGQ5MjFlODc4MzE0N2Q1OWQxZDc1YzI) [![Discord](https://particles.js.org/images/discord.png)](https://discord.gg/hACwv45Hme) [![Telegram](https://particles.js.org/images/telegram.png)](https://t.me/tsparticles)
+
+[![tsParticles Product Hunt](https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=186113&theme=light)](https://www.producthunt.com/posts/tsparticles?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-tsparticles") <a href="https://www.buymeacoffee.com/matteobruni"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a beer&emoji=🍺&slug=matteobruni&button_colour=5F7FFF&font_colour=ffffff&font_family=Arial&outline_colour=000000&coffee_colour=FFDD00"></a>
+
 ## Installation
 
 ```shell
-npm install inferno-particles inferno
+npm install inferno-particles
 ```
 
 or
 
 ```shell
-yarn add inferno-particles inferno
+yarn add inferno-particles
 ```
 
 ## How to use
@@ -28,6 +32,7 @@ _Remote url_
 
 ```javascript
 import Particles from "inferno-particles";
+import { loadFull } from "tsparticles";
 
 class App extends Component {
   constructor(props) {
@@ -41,6 +46,9 @@ class App extends Component {
     console.log(main);
 
     // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    loadFull(main);
   }
 
   particlesLoaded(container) {
@@ -64,6 +72,7 @@ _Options object_
 
 ```javascript
 import Particles from "inferno-particles";
+import { loadFull } from "tsparticles";
 
 class App extends Component {
   constructor(props) {
@@ -77,6 +86,9 @@ class App extends Component {
     console.log(main);
 
     // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    loadFull(main);
   }
 
   particlesLoaded(container) {
@@ -95,9 +107,8 @@ class App extends Component {
               value: "#0d47a1",
             },
           },
-          fpsLimit: 60,
+          fpsLimit: 120,
           interactivity: {
-            detectsOn: "canvas",
             events: {
               onClick: {
                 enable: true,
@@ -110,12 +121,6 @@ class App extends Component {
               resize: true,
             },
             modes: {
-              bubble: {
-                distance: 400,
-                duration: 2,
-                opacity: 0.8,
-                size: 40,
-              },
               push: {
                 quantity: 4,
               },
@@ -150,7 +155,7 @@ class App extends Component {
             number: {
               density: {
                 enable: true,
-                value_area: 800,
+                area: 800,
               },
               value: 80,
             },
@@ -161,8 +166,7 @@ class App extends Component {
               type: "circle",
             },
             size: {
-              random: true,
-              value: 5,
+              value: { min: 1, max: 5 },
             },
           },
           detectRetina: true,
@@ -177,6 +181,7 @@ class App extends Component {
 
 | Prop            | Type     | Definition                                                                                                                                          |
 | --------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id              | string   | The id of the element.                                                                                                                              |
 | width           | string   | The width of the canvas.                                                                                                                            |
 | height          | string   | The height of the canvas.                                                                                                                           |
 | options         | object   | The options of the particles instance.                                                                                                              |

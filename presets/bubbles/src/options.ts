@@ -1,8 +1,8 @@
-import type { ISourceOptions } from "tsparticles";
-import { InteractivityDetect, MoveDirection, OutMode } from "tsparticles";
+import { MoveDirection, OutMode } from "tsparticles-engine";
+import type { ISourceOptions } from "tsparticles-engine";
 
 export const options: ISourceOptions = {
-    fpsLimit: 60,
+    fpsLimit: 120,
     particles: {
         number: {
             value: 0,
@@ -17,11 +17,7 @@ export const options: ISourceOptions = {
             value: 0.3,
         },
         size: {
-            value: 10,
-            random: {
-                enable: true,
-                minimumValue: 5,
-            },
+            value: { min: 5, max: 10 },
         },
         move: {
             angle: {
@@ -38,18 +34,9 @@ export const options: ISourceOptions = {
             },
         },
     },
-    interactivity: {
-        detectsOn: InteractivityDetect.canvas,
-        events: {
-            resize: true,
-        },
-    },
     detectRetina: true,
     background: {
         color: "#fff",
-    },
-    fullScreen: {
-        enable: true,
     },
     emitters: [
         {

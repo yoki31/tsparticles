@@ -7,9 +7,8 @@
                                                value: '#0d47a1'
                                              }
                                            },
-                                           fpsLimit: 60,
+                                           fpsLimit: 120,
                                            interactivity: {
-                                             detectsOn: 'window',
                                              events: {
                                                onClick: {
                                                  enable: true,
@@ -79,12 +78,14 @@
                                              }
                                            },
                                            detectRetina: true
-                                         }"/>
+                                         }" :particlesInit="particlesInit"/>
   </div>
 </template>
 
 <script lang="ts">
 import { Vue } from "vue-property-decorator";
+import type { Engine } from "tsparticles-engine";
+import { loadFull } from "tsparticles";
 
 declare module 'particles.vue';
 import Particles from "particles.vue";
@@ -92,6 +93,9 @@ import Particles from "particles.vue";
 Vue.use(Particles);
 
 export default class App extends Vue {
+  async particlesInit(engine: Engine) {
+    await loadFull(engine);
+  }
 }
 </script>
 
@@ -103,15 +107,5 @@ export default class App extends Vue {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
-
-#tsparticles {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000000;
-  z-index: -10;
 }
 </style>

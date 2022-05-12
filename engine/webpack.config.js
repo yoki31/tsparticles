@@ -2,7 +2,7 @@ const path = require("path");
 const TerserPlugin = require("terser-webpack-plugin");
 const webpack = require("webpack");
 const version = require("./package.json").version;
-const {BundleAnalyzerPlugin} = require("webpack-bundle-analyzer");
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
 const banner = `Author : Matteo Bruni
 MIT license: https://opensource.org/licenses/MIT
@@ -23,10 +23,11 @@ const getConfig = (entry) => {
             path: path.resolve(__dirname, "dist"),
             filename: "[name].js",
             libraryTarget: "umd",
-            globalObject: "this"
+            globalObject: "window",
+            chunkFilename: '[name].js',
         },
         resolve: {
-            extensions: [".js", ".json"]
+            extensions: [ ".js", ".json" ]
         },
         module: {
             rules: [
@@ -47,6 +48,7 @@ const getConfig = (entry) => {
                 banner: minBanner,
                 include: /\.min\.js$/
             }),
+            new webpack.ProgressPlugin(),
             new BundleAnalyzerPlugin({
                 openAnalyzer: false,
                 analyzerMode: "static",
@@ -89,11 +91,7 @@ const getConfig = (entry) => {
 
 module.exports = [
     getConfig({
-        "tsparticles.slim": "./dist/browser/index.slim.js",
-        "tsparticles.slim.min": "./dist/browser/index.slim.js"
-    }),
-    getConfig({
-        tsparticles: "./dist/browser/index.js",
-        "tsparticles.min": "./dist/browser/index.js"
+        "tsparticles.engine": "./dist/browser/index.js",
+        "tsparticles.engine.min": "./dist/browser/index.js"
     })
 ];

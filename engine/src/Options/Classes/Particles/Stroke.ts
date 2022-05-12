@@ -1,7 +1,7 @@
-import type { IStroke } from "../../Interfaces/Particles/IStroke";
-import type { RecursivePartial } from "../../../Types";
 import { AnimatableColor } from "../AnimatableColor";
 import type { IOptionLoader } from "../../Interfaces/IOptionLoader";
+import type { IStroke } from "../../Interfaces/Particles/IStroke";
+import type { RecursivePartial } from "../../../Types/RecursivePartial";
 
 /**
  * [[include:Options/Particles/Stroke.md]]
@@ -17,7 +17,7 @@ export class Stroke implements IStroke, IOptionLoader<IStroke> {
     }
 
     load(data?: RecursivePartial<IStroke>): void {
-        if (data === undefined) {
+        if (!data) {
             return;
         }
 

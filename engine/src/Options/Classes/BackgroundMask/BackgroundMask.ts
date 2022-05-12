@@ -1,9 +1,9 @@
-import type { IBackgroundMask } from "../../Interfaces/BackgroundMask/IBackgroundMask";
-import type { RecursivePartial } from "../../../Types";
-import type { IBackgroundMaskCover } from "../../Interfaces/BackgroundMask/IBackgroundMaskCover";
 import { BackgroundMaskCover } from "./BackgroundMaskCover";
+import type { IBackgroundMask } from "../../Interfaces/BackgroundMask/IBackgroundMask";
+import type { IBackgroundMaskCover } from "../../Interfaces/BackgroundMask/IBackgroundMaskCover";
 import type { IColor } from "../../../Core/Interfaces/Colors";
 import type { IOptionLoader } from "../../Interfaces/IOptionLoader";
+import type { RecursivePartial } from "../../../Types/RecursivePartial";
 
 /**
  * [[include:Options/BackgroundMask.md]]
@@ -14,7 +14,7 @@ export class BackgroundMask implements IBackgroundMask, IOptionLoader<IBackgroun
      * Canvas composite operation
      * values here: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
      */
-    composite;
+    composite: GlobalCompositeOperation;
 
     /**
      * Background covering color
@@ -33,7 +33,7 @@ export class BackgroundMask implements IBackgroundMask, IOptionLoader<IBackgroun
     }
 
     load(data?: RecursivePartial<IBackgroundMask>): void {
-        if (data === undefined) {
+        if (!data) {
             return;
         }
 

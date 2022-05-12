@@ -1,4 +1,4 @@
-[![banner](https://particles.js.org/images/banner2.png)](https://particles.js.org)
+[![banner](https://particles.js.org/images/banner3.png)](https://particles.js.org)
 
 # tsParticles - Partículas TypeScript
 
@@ -71,7 +71,7 @@ const tsParticles = require("tsparticles");
 
 // ou
 
-import {tsParticles} from "tsparticles";
+import {tsParticles} from "tsparticles-engine";
 ```
 
 O `tsParticles` importado é a mesma instância que você tem quando está incluindo o script.
@@ -259,7 +259,7 @@ será creditado como autor do template!
 
 <https://particles.js.org/samples>
 
-[![Particles demo](https://particles.js.org/images/demo.png?v=1.8.1)](https://particles.js.org/samples)
+[![Particles demo](https://particles.js.org/images/demo2.png?v=1.39.1)](https://particles.js.org/samples)
 
 ---
 

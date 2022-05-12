@@ -1,10 +1,11 @@
-import { tsParticles, Container } from "tsparticles";
+import { tsParticles, Container } from "tsparticles-engine";
 import type { IParticlesProps } from "./IParticlesProps";
 import {
 	createEffect,
 	createMemo,
 	createSignal,
 	onCleanup,
+	onMount,
 	JSX,
 } from "solid-js";
 
@@ -16,13 +17,10 @@ interface MutableRefObject<T> {
  * @param (props:IParticlesProps) Particles component properties
  */
 const Particles = (props: IParticlesProps): JSX.Element => {
+	const [init, setInit] = createSignal(!props.init);
+
 	try {
 		const id = props.id ?? "tsparticles";
-
-		if (props.init) {
-			props.init(tsParticles);
-		}
-
 		const options = createMemo(() => props.params ?? props.options ?? {});
 
 		const refContainer = props.container as MutableRefObject<
@@ -33,7 +31,7 @@ const Particles = (props: IParticlesProps): JSX.Element => {
 			undefined as string | undefined
 		);
 
-		const cb = (container?: Container) => {
+		const cb = async (container?: Container) => {
 			if (refContainer) {
 				refContainer.current = container;
 			}
@@ -41,23 +39,41 @@ const Particles = (props: IParticlesProps): JSX.Element => {
 			setContainerId(container?.id);
 
 			if (loaded && container) {
-				loaded(container);
+				await loaded(container);
 			}
 		};
 
-		createEffect(() => {
-			const container = tsParticles.dom().find((t) => t.id === containerId());
+		onMount(async () => {
+			if (props.init && !init()) {
+				await props.init(tsParticles);
 
-			container?.destroy();
-
-			if (url) {
-				tsParticles.loadJSON(id, url).then(cb);
-			} else {
-				tsParticles.load(id, options()).then(cb);
+				setInit(true);
 			}
 		});
 
+		createEffect(async () => {
+			if (!init()) {
+				console.log("not initialized");
+
+				return;
+			}
+
+			let container = tsParticles.dom().find((t) => t.id === containerId());
+
+			container?.destroy();
+
+			container = await (url
+				? tsParticles.loadJSON(id, url)
+				: tsParticles.load(id, options()));
+
+			await cb(container);
+		});
+
 		onCleanup(() => {
+			if (!init()) {
+				return;
+			}
+
 			const container = tsParticles.dom().find((t) => t.id === containerId());
 
 			container?.destroy();
@@ -78,7 +94,9 @@ const Particles = (props: IParticlesProps): JSX.Element => {
 			</div>
 		);
 	} catch (e) {
-		return <div></div>;
+		console.log(e);
+
+		return <div />;
 	}
 };
 

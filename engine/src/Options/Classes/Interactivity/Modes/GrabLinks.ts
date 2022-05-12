@@ -1,7 +1,7 @@
 import type { IGrabLinks } from "../../../Interfaces/Interactivity/Modes/IGrabLinks";
-import type { RecursivePartial } from "../../../../Types";
-import { OptionsColor } from "../../OptionsColor";
 import type { IOptionLoader } from "../../../Interfaces/IOptionLoader";
+import { OptionsColor } from "../../OptionsColor";
+import type { RecursivePartial } from "../../../../Types/RecursivePartial";
 
 /**
  * @category Options
@@ -19,7 +19,7 @@ export class GrabLinks implements IGrabLinks, IOptionLoader<IGrabLinks> {
     }
 
     load(data?: RecursivePartial<IGrabLinks>): void {
-        if (data === undefined) {
+        if (!data) {
             return;
         }
 

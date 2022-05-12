@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Container } from 'ng-particles';
+import type { Container, Engine } from "tsparticles-engine";
+import { loadFull } from "tsparticles";
 
 @Component({
   selector: 'app-tab1',
@@ -7,7 +8,7 @@ import { Container } from 'ng-particles';
   styleUrls: [ 'tab1.page.scss' ]
 })
 export class Tab1Page {
-  particlesId = "tsparticles";
+  particlesId = 'tsparticles';
   particlesOptions = {
     fullScreen: {
       enable: true
@@ -17,9 +18,8 @@ export class Tab1Page {
         value: '#0d47a1'
       }
     },
-    fpsLimit: 60,
+    fpsLimit: 120,
     interactivity: {
-      detectsOn: 'window',
       events: {
         onClick: {
           enable: true,
@@ -70,10 +70,11 @@ export class Tab1Page {
         speed: 6,
         straight: false
       },
+      // eslint-disable-next-line id-blacklist
       number: {
         density: {
           enable: true,
-          value_area: 800
+          area: 800
         },
         value: 80
       },
@@ -99,5 +100,9 @@ export class Tab1Page {
     setTimeout(async () => {
       container.refresh();
     }, 500);
+  }
+
+  async particlesInit(main: Engine): Promise<void> {
+    await loadFull(main);
   }
 }

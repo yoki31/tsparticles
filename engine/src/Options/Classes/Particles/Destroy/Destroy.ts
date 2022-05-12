@@ -1,7 +1,7 @@
+import { DestroyMode } from "../../../../Enums/Modes/DestroyMode";
 import { IDestroy } from "../../../Interfaces/Particles/Destroy/IDestroy";
 import { IOptionLoader } from "../../../Interfaces/IOptionLoader";
-import { DestroyMode } from "../../../../Enums";
-import { RecursivePartial } from "../../../../Types";
+import { RecursivePartial } from "../../../../Types/RecursivePartial";
 import { Split } from "./Split";
 
 export class Destroy implements IDestroy, IOptionLoader<IDestroy> {

@@ -12,7 +12,7 @@
 | `outModes`  | `object`    |                                                                                                                                                                    | See out modes documentation below |
 | `random`    | `boolean`   | `true` / `false`                                                                                                                                                   |                                   |
 | `size`      | `boolean`   | `true` / `false`                                                                                                                                                   |                                   |
-| `speed`     | `number`    | `4`                                                                                                                                                                |                                   |
+| `speed`     | `number`    | `4`                                                                                                                                                                | assuming a predefined distance for the particle to travel, `speed` is the amount of time takes to travel the predefined distance for any particle |
 | `straight`  | `boolean`   | `true` / `false`                                                                                                                                                   |                                   |
 | `trail`     | `object`    |                                                                                                                                                                    | See trail documentation below     |
 | `vibrate`   | `boolean`   | `true` / `false`                                                                                                                                                   |                                   |
@@ -50,14 +50,12 @@
 
 ## Particles Move Noise
 
-| key                         | option type | example            | notes |
-| --------------------------- | ----------- | ------------------ | ----- |
-| `clamp`                     | `boolean`   | `true` / `false`   |       |
-| `delay.value`               | `number`    | `1`                |       |
-| `delay.random.enable`       | `number`    | `true` / `false`   |       |
-| `delay.random.minimumValue` | `number`    | `0`                |       |
-| `enable`                    | `boolean`   | `true` / `false`   |       |
-| `generator`                 | `string`    | `"generator name"` |       |
+| key                         | option type          | example                        | notes |
+| --------------------------- |----------------------|--------------------------------| ----- |
+| `clamp`                     | `boolean`            | `true` / `false`               |       |
+| `delay.value`               | `number` / `object`  | `1` / `{ min: 0.5, max: 1.5 }` |       |
+| `enable`                    | `boolean`            | `true` / `false`               |       |
+| `generator`                 | `string`             | `"generator name"`             |       |
 
 ## Particles Move Out Modes
 

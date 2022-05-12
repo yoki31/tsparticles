@@ -1,18 +1,14 @@
-import type { ISourceOptions } from "tsparticles";
-import { DestroyMode, InteractivityDetect, MoveDirection, OutMode } from "tsparticles";
+import { DestroyMode, MoveDirection, OutMode } from "tsparticles-engine";
+import type { ISourceOptions } from "tsparticles-engine";
 
 export const options: ISourceOptions = {
-    fullScreen: {
-        enable: true,
-    },
-    fpsLimit: 60,
+    fpsLimit: 120,
     particles: {
         bounce: {
             vertical: {
-                value: 0.85,
-                random: {
-                    enable: true,
-                    minimumValue: 0.75,
+                value: {
+                    min: 0.75,
+                    max: 0.85,
                 },
             },
         },
@@ -27,32 +23,26 @@ export const options: ISourceOptions = {
             split: {
                 count: 2,
                 factor: {
-                    value: 2,
-                    random: {
-                        enable: true,
-                        minimumValue: 1.1,
+                    value: {
+                        min: 1.1,
+                        max: 2,
                     },
                 },
                 rate: {
-                    value: 3,
-                    random: {
-                        enable: true,
-                        minimumValue: 2,
+                    value: {
+                        min: 2,
+                        max: 3,
                     },
                 },
             },
-        },
-        shape: {
-            type: "circle",
         },
         opacity: {
             value: 0.5,
         },
         size: {
-            value: 20,
-            random: {
-                enable: true,
-                minimumValue: 10,
+            value: {
+                min: 10,
+                max: 20,
             },
         },
         move: {
@@ -78,12 +68,6 @@ export const options: ISourceOptions = {
                 fillColor: "#fff",
                 length: 3,
             },
-        },
-    },
-    interactivity: {
-        detectsOn: InteractivityDetect.canvas,
-        events: {
-            resize: true,
         },
     },
     detectRetina: true,

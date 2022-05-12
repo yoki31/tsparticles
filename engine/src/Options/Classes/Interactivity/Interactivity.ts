@@ -1,9 +1,10 @@
-import type { IInteractivity } from "../../Interfaces/Interactivity/IInteractivity";
-import { HoverMode, InteractivityDetect } from "../../../Enums";
 import { Events } from "./Events/Events";
-import { Modes } from "./Modes/Modes";
-import type { RecursivePartial } from "../../../Types";
+import { HoverMode } from "../../../Enums/Modes/HoverMode";
+import type { IInteractivity } from "../../Interfaces/Interactivity/IInteractivity";
 import type { IOptionLoader } from "../../Interfaces/IOptionLoader";
+import { InteractivityDetect } from "../../../Enums/InteractivityDetect";
+import { Modes } from "./Modes/Modes";
+import type { RecursivePartial } from "../../../Types/RecursivePartial";
 
 /**
  * [[include:Options/Interactivity.md]]
@@ -32,13 +33,13 @@ export class Interactivity implements IInteractivity, IOptionLoader<IInteractivi
     modes;
 
     constructor() {
-        this.detectsOn = InteractivityDetect.canvas;
+        this.detectsOn = InteractivityDetect.window;
         this.events = new Events();
         this.modes = new Modes();
     }
 
     load(data?: RecursivePartial<IInteractivity>): void {
-        if (data === undefined) {
+        if (!data) {
             return;
         }
 

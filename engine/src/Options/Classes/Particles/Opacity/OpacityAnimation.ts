@@ -1,8 +1,9 @@
-import type { IOpacityAnimation } from "../../../Interfaces/Particles/Opacity/IOpacityAnimation";
-import type { RecursivePartial } from "../../../../Types";
-import type { IOptionLoader } from "../../../Interfaces/IOptionLoader";
-import { DestroyType, StartValueType } from "../../../../Enums";
 import { AnimationOptions } from "../../AnimationOptions";
+import { DestroyType } from "../../../../Enums/Types/DestroyType";
+import type { IOpacityAnimation } from "../../../Interfaces/Particles/Opacity/IOpacityAnimation";
+import type { IOptionLoader } from "../../../Interfaces/IOptionLoader";
+import type { RecursivePartial } from "../../../../Types/RecursivePartial";
+import { StartValueType } from "../../../../Enums/Types/StartValueType";
 
 /**
  * @category Options
@@ -43,7 +44,7 @@ export class OpacityAnimation extends AnimationOptions implements IOpacityAnimat
     }
 
     load(data?: RecursivePartial<IOpacityAnimation>): void {
-        if (data === undefined) {
+        if (!data) {
             return;
         }
 

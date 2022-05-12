@@ -1,7 +1,8 @@
-import type { IOptionsColor } from "../Interfaces/IOptionsColor";
-import type { IRgb, IHsl, IHsv, IValueColor } from "../../Core/Interfaces";
-import type { RecursivePartial, SingleOrMultiple } from "../../Types";
+import type { IHsl, IHsv, IRgb, IValueColor } from "../../Core/Interfaces/Colors";
 import type { IOptionLoader } from "../Interfaces/IOptionLoader";
+import type { IOptionsColor } from "../Interfaces/IOptionsColor";
+import type { RecursivePartial } from "../../Types/RecursivePartial";
+import type { SingleOrMultiple } from "../../Types/SingleOrMultiple";
 
 /**
  * [[include:Color.md]]
@@ -11,7 +12,7 @@ export class OptionsColor implements IOptionsColor, IOptionLoader<IOptionsColor>
     value: SingleOrMultiple<SingleOrMultiple<string> | IValueColor | IRgb | IHsl | IHsv>;
 
     constructor() {
-        this.value = "#fff";
+        this.value = "";
     }
 
     static create(

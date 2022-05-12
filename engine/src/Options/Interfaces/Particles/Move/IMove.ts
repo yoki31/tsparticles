@@ -1,13 +1,15 @@
-import type { IAttract } from "./IAttract";
-import type { MoveDirection, MoveDirectionAlt, OutMode, OutModeAlt } from "../../../../Enums";
-import type { ITrail } from "./ITrail";
-import type { IPath } from "./Path/iPath";
+import type { MoveDirection, MoveDirectionAlt } from "../../../../Enums/Directions/MoveDirection";
+import type { OutMode, OutModeAlt } from "../../../../Enums/Modes/OutMode";
+import type { ICoordinates } from "../../../../Core/Interfaces/ICoordinates";
+import type { IDistance } from "../../../../Core/Interfaces/IDistance";
 import type { IMoveAngle } from "./IMoveAngle";
+import type { IMoveAttract } from "./IMoveAttract";
 import type { IMoveGravity } from "./IMoveGravity";
+import type { IMovePath } from "./Path/IMovePath";
+import type { IMoveTrail } from "./IMoveTrail";
 import type { IOutModes } from "./IOutModes";
-import type { RangeValue } from "../../../../Types";
-import { IDistance } from "../../../../Core/Interfaces";
-import { ISpin } from "./ISpin";
+import type { ISpin } from "./ISpin";
+import type { RangeValue } from "../../../../Types/RangeValue";
 
 /**
  * [[include:Options/Particles/Move.md]]
@@ -37,10 +39,11 @@ export interface IMove {
     /**
      * @deprecated use the new [[path]] property instead
      */
-    noise: IPath;
+    noise: IMovePath;
 
     angle: number | IMoveAngle;
-    attract: IAttract;
+    attract: IMoveAttract;
+    center: Partial<ICoordinates & { radius: number }>;
     decay: number;
     direction: MoveDirection | keyof typeof MoveDirection | MoveDirectionAlt | number;
     distance: number | Partial<IDistance>;
@@ -48,13 +51,13 @@ export interface IMove {
     enable: boolean;
     gravity: IMoveGravity;
     outModes: IOutModes | OutMode | keyof typeof OutMode | OutModeAlt;
-    path: IPath;
+    path: IMovePath;
     random: boolean;
     size: boolean;
     speed: RangeValue;
     spin: ISpin;
     straight: boolean;
-    trail: ITrail;
+    trail: IMoveTrail;
     vibrate: boolean;
     warp: boolean;
 }

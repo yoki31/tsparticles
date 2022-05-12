@@ -1,23 +1,28 @@
+import { deepExtend, loadParticlesOptions } from "../../Utils/Utils";
+import { Background } from "./Background/Background";
+import { BackgroundMask } from "./BackgroundMask/BackgroundMask";
+import type { Engine } from "../../engine";
+import { FullScreen } from "./FullScreen/FullScreen";
+import type { IOptionLoader } from "../Interfaces/IOptionLoader";
 import type { IOptions } from "../Interfaces/IOptions";
 import { Interactivity } from "./Interactivity/Interactivity";
-import { ParticlesOptions } from "./Particles/ParticlesOptions";
-import { BackgroundMask } from "./BackgroundMask/BackgroundMask";
-import type { RangeValue, RecursivePartial } from "../../Types";
-import { Background } from "./Background/Background";
-import { Plugins } from "../../Utils";
-import type { IOptionLoader } from "../Interfaces/IOptionLoader";
-import { Theme } from "./Theme/Theme";
-import { ThemeMode } from "../../Enums";
-import { FullScreen } from "./FullScreen/FullScreen";
-import { Motion } from "./Motion/Motion";
 import { ManualParticle } from "./ManualParticle";
+import { Motion } from "./Motion/Motion";
+import type { RangeValue } from "../../Types/RangeValue";
+import type { RecursivePartial } from "../../Types/RecursivePartial";
 import { Responsive } from "./Responsive";
+import { ResponsiveMode } from "../../Enums/Modes/ResponsiveMode";
+import type { SingleOrMultiple } from "../../Types/SingleOrMultiple";
+import { Theme } from "./Theme/Theme";
+import { ThemeMode } from "../../Enums/Modes/ThemeMode";
 
 /**
  * [[include:Options.md]]
  * @category Options
  */
 export class Options implements IOptions, IOptionLoader<IOptions> {
+    readonly #engine;
+
     /**
      * @deprecated this property is obsolete, please use the new fpsLimit
      */
@@ -77,7 +82,8 @@ export class Options implements IOptions, IOptionLoader<IOptions> {
     particles;
     pauseOnBlur;
     pauseOnOutsideViewport;
-    preset?: string | string[];
+    preset?: SingleOrMultiple<string>;
+    style: RecursivePartial<CSSStyleDeclaration>;
     responsive: Responsive[];
     themes: Theme[];
     zLayers;
@@ -86,21 +92,23 @@ export class Options implements IOptions, IOptionLoader<IOptions> {
 
     [name: string]: unknown;
 
-    constructor() {
+    constructor(engine: Engine) {
+        this.#engine = engine;
         this.autoPlay = true;
         this.background = new Background();
         this.backgroundMask = new BackgroundMask();
         this.fullScreen = new FullScreen();
         this.detectRetina = true;
         this.duration = 0;
-        this.fpsLimit = 60;
+        this.fpsLimit = 120;
         this.interactivity = new Interactivity();
         this.manualParticles = [];
         this.motion = new Motion();
-        this.particles = new ParticlesOptions();
+        this.particles = loadParticlesOptions();
         this.pauseOnBlur = true;
         this.pauseOnOutsideViewport = true;
         this.responsive = [];
+        this.style = {};
         this.themes = [];
         this.zLayers = 100;
     }
@@ -110,7 +118,7 @@ export class Options implements IOptions, IOptionLoader<IOptions> {
      * @param data the source data to load into the instance
      */
     load(data?: RecursivePartial<IOptions>): void {
-        if (data === undefined) {
+        if (!data) {
             return;
         }
 
@@ -182,7 +190,9 @@ export class Options implements IOptions, IOptionLoader<IOptions> {
         this.motion.load(data.motion);
         this.particles.load(data.particles);
 
-        Plugins.loadOptions(this, data);
+        this.style = deepExtend(this.style, data.style) as RecursivePartial<CSSStyleDeclaration>;
+
+        this.#engine.plugins.loadOptions(this, data);
 
         if (data.responsive !== undefined) {
             for (const responsive of data.responsive) {
@@ -229,7 +239,11 @@ export class Options implements IOptions, IOptionLoader<IOptions> {
     setResponsive(width: number, pxRatio: number, defaultOptions: IOptions): number | undefined {
         this.load(defaultOptions);
 
-        const responsiveOptions = this.responsive.find((t) => t.maxWidth * pxRatio > width);
+        const responsiveOptions = this.responsive.find((t) =>
+            t.mode === ResponsiveMode.screen && screen
+                ? t.maxWidth * pxRatio > screen.availWidth
+                : t.maxWidth * pxRatio > width
+        );
 
         this.load(responsiveOptions?.options);
 
@@ -237,7 +251,7 @@ export class Options implements IOptions, IOptionLoader<IOptions> {
     }
 
     private importPreset(preset: string): void {
-        this.load(Plugins.getPreset(preset));
+        this.load(this.#engine.plugins.getPreset(preset));
     }
 
     #findDefaultTheme(mode: ThemeMode): Theme | undefined {

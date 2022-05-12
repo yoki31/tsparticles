@@ -1,36 +1,37 @@
-import type { IParticles } from "../../Interfaces/Particles/IParticles";
+import { AnimatableColor } from "../AnimatableColor";
+import { AnimatableGradient } from "../AnimatableGradient";
+import { Collisions } from "./Collisions/Collisions";
+import { Destroy } from "./Destroy/Destroy";
+import type { IOptionLoader } from "../../Interfaces/IOptionLoader";
+import type { IParticlesOptions } from "../../Interfaces/Particles/IParticlesOptions";
+import { Life } from "./Life/Life";
 import { Links } from "./Links/Links";
 import { Move } from "./Move/Move";
-import { ParticlesNumber } from "./Number/ParticlesNumber";
 import { Opacity } from "./Opacity/Opacity";
-import { Shape } from "./Shape/Shape";
-import { Size } from "./Size/Size";
-import { Rotate } from "./Rotate/Rotate";
-import type { RecursivePartial, SingleOrMultiple } from "../../../Types";
-import { Shadow } from "./Shadow";
-import { Stroke } from "./Stroke";
-import { Collisions } from "./Collisions/Collisions";
-import { Twinkle } from "./Twinkle/Twinkle";
-import { AnimatableColor } from "../AnimatableColor";
-import type { IOptionLoader } from "../../Interfaces/IOptionLoader";
-import { Life } from "./Life/Life";
-import { Bounce } from "./Bounce/Bounce";
-import { Destroy } from "./Destroy/Destroy";
-import { Wobble } from "./Wobble/Wobble";
-import { Tilt } from "./Tilt/Tilt";
-import { Roll } from "./Roll/Roll";
-import { ZIndex } from "./ZIndex/ZIndex";
-import type { ParticlesGroups } from "../../../Types/ParticlesGroups";
-import { deepExtend } from "../../../Utils";
 import { Orbit } from "./Orbit/Orbit";
-import { Repulse } from "./Repulse/Repulse";
-import { AnimatableGradient } from "../AnimatableGradient";
+import { ParticlesBounce } from "./Bounce/ParticlesBounce";
+import type { ParticlesGroups } from "../../../Types/ParticlesGroups";
+import { ParticlesNumber } from "./Number/ParticlesNumber";
+import { ParticlesRepulse } from "./Repulse/ParticlesRepulse";
+import type { RecursivePartial } from "../../../Types/RecursivePartial";
+import { Roll } from "./Roll/Roll";
+import { Rotate } from "./Rotate/Rotate";
+import { Shadow } from "./Shadow";
+import { Shape } from "./Shape/Shape";
+import type { SingleOrMultiple } from "../../../Types/SingleOrMultiple";
+import { Size } from "./Size/Size";
+import { Stroke } from "./Stroke";
+import { Tilt } from "./Tilt/Tilt";
+import { Twinkle } from "./Twinkle/Twinkle";
+import { Wobble } from "./Wobble/Wobble";
+import { ZIndex } from "./ZIndex/ZIndex";
+import { deepExtend } from "../../../Utils/Utils";
 
 /**
  * [[include:Options/Particles.md]]
  * @category Options
  */
-export class ParticlesOptions implements IParticles, IOptionLoader<IParticles> {
+export class ParticlesOptions implements IParticlesOptions, IOptionLoader<IParticlesOptions> {
     bounce;
     collisions;
     color;
@@ -91,9 +92,10 @@ export class ParticlesOptions implements IParticles, IOptionLoader<IParticles> {
     }
 
     constructor() {
-        this.bounce = new Bounce();
+        this.bounce = new ParticlesBounce();
         this.collisions = new Collisions();
         this.color = new AnimatableColor();
+        this.color.value = "#fff";
         this.destroy = new Destroy();
         this.gradient = [];
         this.groups = {};
@@ -104,7 +106,7 @@ export class ParticlesOptions implements IParticles, IOptionLoader<IParticles> {
         this.opacity = new Opacity();
         this.orbit = new Orbit();
         this.reduceDuplicates = false;
-        this.repulse = new Repulse();
+        this.repulse = new ParticlesRepulse();
         this.roll = new Roll();
         this.rotate = new Rotate();
         this.shadow = new Shadow();
@@ -117,8 +119,8 @@ export class ParticlesOptions implements IParticles, IOptionLoader<IParticles> {
         this.zIndex = new ZIndex();
     }
 
-    load(data?: RecursivePartial<IParticles>): void {
-        if (data === undefined) {
+    load(data?: RecursivePartial<IParticlesOptions>): void {
+        if (!data) {
             return;
         }
 
@@ -139,7 +141,7 @@ export class ParticlesOptions implements IParticles, IOptionLoader<IParticles> {
                 const item = data.groups[group];
 
                 if (item !== undefined) {
-                    this.groups[group] = deepExtend(this.groups[group] ?? {}, item) as IParticles;
+                    this.groups[group] = deepExtend(this.groups[group] ?? {}, item) as IParticlesOptions;
                 }
             }
         }

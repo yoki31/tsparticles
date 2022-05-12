@@ -1,5 +1,9 @@
 {
   "packages": [
+    "bundles/*",
+    "cli",
+    "cli/files/create-preset/js",
+    "cli/files/create-preset/ts",
     "components/*",
     "demo/**/*",
     "editor",
@@ -7,13 +11,14 @@
     "interactions/*",
     "interactions/external/*",
     "interactions/particles/*",
+    "move/*",
     "paths/*",
-    "utils/*",
     "plugins/*",
     "presets/*",
     "shapes/*",
     "templates/*",
     "updaters/*",
+    "utils/*",
     "website"
   ],
   "version": "independent",

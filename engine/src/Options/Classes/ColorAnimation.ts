@@ -1,16 +1,17 @@
 import type { IColorAnimation } from "../Interfaces/IColorAnimation";
-import type { RangeValue, RecursivePartial } from "../../Types";
 import type { IOptionLoader } from "../Interfaces/IOptionLoader";
-import { setRangeValue } from "../../Utils";
+import type { RangeValue } from "../../Types/RangeValue";
+import type { RecursivePartial } from "../../Types/RecursivePartial";
+import { setRangeValue } from "../../Utils/NumberUtils";
 
 /**
  * @category Options
  */
 export class ColorAnimation implements IColorAnimation, IOptionLoader<IColorAnimation> {
-    count;
+    count: RangeValue;
     enable;
     offset: RangeValue;
-    speed;
+    speed: RangeValue;
     sync;
 
     constructor() {
@@ -22,12 +23,12 @@ export class ColorAnimation implements IColorAnimation, IOptionLoader<IColorAnim
     }
 
     load(data?: RecursivePartial<IColorAnimation>): void {
-        if (data === undefined) {
+        if (!data) {
             return;
         }
 
         if (data.count !== undefined) {
-            this.count = data.count;
+            this.count = setRangeValue(data.count);
         }
 
         if (data.enable !== undefined) {
@@ -39,7 +40,7 @@ export class ColorAnimation implements IColorAnimation, IOptionLoader<IColorAnim
         }
 
         if (data.speed !== undefined) {
-            this.speed = data.speed;
+            this.speed = setRangeValue(data.speed);
         }
 
         if (data.sync !== undefined) {

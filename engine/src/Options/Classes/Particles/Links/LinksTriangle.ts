@@ -1,7 +1,7 @@
 import type { ILinksTriangle } from "../../../Interfaces/Particles/Links/ILinksTriangle";
-import { OptionsColor } from "../../OptionsColor";
-import type { RecursivePartial } from "../../../../Types";
 import type { IOptionLoader } from "../../../Interfaces/IOptionLoader";
+import { OptionsColor } from "../../OptionsColor";
+import type { RecursivePartial } from "../../../../Types/RecursivePartial";
 
 /**
  * @category Options
@@ -18,7 +18,7 @@ export class LinksTriangle implements ILinksTriangle, IOptionLoader<ILinksTriang
     }
 
     load(data?: RecursivePartial<ILinksTriangle>): void {
-        if (data === undefined) {
+        if (!data) {
             return;
         }
 

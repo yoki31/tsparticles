@@ -1,9 +1,9 @@
-import type { ITheme } from "../../Interfaces/Theme/ITheme";
-import type { RecursivePartial } from "../../../Types";
 import type { IOptionLoader } from "../../Interfaces/IOptionLoader";
 import type { IOptions } from "../../Interfaces/IOptions";
-import { deepExtend } from "../../../Utils";
+import type { ITheme } from "../../Interfaces/Theme/ITheme";
+import type { RecursivePartial } from "../../../Types/RecursivePartial";
 import { ThemeDefault } from "./ThemeDefault";
+import { deepExtend } from "../../../Utils/Utils";
 
 export class Theme implements ITheme, IOptionLoader<ITheme> {
     name;
@@ -16,7 +16,7 @@ export class Theme implements ITheme, IOptionLoader<ITheme> {
     }
 
     load(data?: RecursivePartial<ITheme>): void {
-        if (data === undefined) {
+        if (!data) {
             return;
         }
 

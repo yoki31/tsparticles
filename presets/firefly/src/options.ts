@@ -1,12 +1,12 @@
-import type { ISourceOptions } from "tsparticles";
-import { ClickMode, InteractivityDetect } from "tsparticles";
+import { HoverMode } from "tsparticles-engine";
+import type { ISourceOptions } from "tsparticles-engine";
 
 export const options: ISourceOptions = {
     fullScreen: {
         enable: true,
         zIndex: -1,
     },
-    fpsLimit: 60,
+    fpsLimit: 120,
     particles: {
         number: {
             value: 0,
@@ -22,7 +22,7 @@ export const options: ISourceOptions = {
             count: 1,
         },
         opacity: {
-            value: 1,
+            value: { min: 0.1, max: 1 },
             animation: {
                 enable: true,
                 speed: 3,
@@ -42,11 +42,10 @@ export const options: ISourceOptions = {
         },
     },
     interactivity: {
-        detectsOn: InteractivityDetect.window,
         events: {
             onHover: {
                 enable: true,
-                mode: ClickMode.trail,
+                mode: HoverMode.trail,
             },
             resize: true,
         },

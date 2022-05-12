@@ -1,7 +1,7 @@
 /**
  * @category Options
  */
-import { EasingType } from "../../../../Enums";
+import type { EasingType } from "../../../../Enums/Types/EasingType";
 
 export interface IAttract {
     distance: number;

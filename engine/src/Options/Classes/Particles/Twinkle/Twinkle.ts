@@ -1,7 +1,7 @@
-import type { ITwinkle } from "../../../Interfaces/Particles/Twinkle/ITwinkle";
-import type { RecursivePartial } from "../../../../Types";
-import { TwinkleValues } from "./TwinkleValues";
 import type { IOptionLoader } from "../../../Interfaces/IOptionLoader";
+import type { ITwinkle } from "../../../Interfaces/Particles/Twinkle/ITwinkle";
+import type { RecursivePartial } from "../../../../Types/RecursivePartial";
+import { TwinkleValues } from "./TwinkleValues";
 
 /**
  * [[include:Options/Particles/Twinkle.md]]
@@ -17,7 +17,7 @@ export class Twinkle implements ITwinkle, IOptionLoader<ITwinkle> {
     }
 
     load(data?: RecursivePartial<ITwinkle>): void {
-        if (data === undefined) {
+        if (!data) {
             return;
         }
 

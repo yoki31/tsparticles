@@ -3,6 +3,359 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.6](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@2.0.5...tsparticles-demo@2.0.6) (2022-04-16)
+
+**Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
+## [2.0.5](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@2.0.4...tsparticles-demo@2.0.5) (2022-04-14)
+
+**Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
+## [2.0.4](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.28.1...tsparticles-demo@2.0.4) (2022-04-06)
+
+
+### Features
+
+* added outside and inside movement to out modes ([8d648e2](https://github.com/matteobruni/tsparticles/commit/8d648e2876249d8acd6b5e5a56455200ab03f117))
+* created and implemented move plugins ([752483a](https://github.com/matteobruni/tsparticles/commit/752483aeeb94dd851dc27fe75e4c258fd87f0a90))
+* fixed firefly and fireworks presets ([ec952c9](https://github.com/matteobruni/tsparticles/commit/ec952c9ac0b42dc1c5350279a44a1255ca1f4fca))
+* fixed fountain presets ([3b47867](https://github.com/matteobruni/tsparticles/commit/3b478673153181396446f510d7ca5ad09abfcd4f))
+* splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
+
+
+
+
+
+## [2.0.3](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.27.1...tsparticles-demo@2.0.3) (2022-03-11)
+
+
+### Features
+
+* added outside and inside movement to out modes ([8d648e2](https://github.com/matteobruni/tsparticles/commit/8d648e2876249d8acd6b5e5a56455200ab03f117))
+* created and implemented move plugins ([752483a](https://github.com/matteobruni/tsparticles/commit/752483aeeb94dd851dc27fe75e4c258fd87f0a90))
+* fixed firefly and fireworks presets ([ec952c9](https://github.com/matteobruni/tsparticles/commit/ec952c9ac0b42dc1c5350279a44a1255ca1f4fca))
+* fixed fountain presets ([3b47867](https://github.com/matteobruni/tsparticles/commit/3b478673153181396446f510d7ca5ad09abfcd4f))
+* splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
+
+
+
+
+
+## [2.0.2](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.26.4...tsparticles-demo@2.0.2) (2022-02-21)
+## [1.28.1](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.28.0...tsparticles-demo@1.28.1) (2022-04-06)
+
+**Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
+# [1.28.0](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.27.4...tsparticles-demo@1.28.0) (2022-04-04)
+
+**Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
+## [1.27.4](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.27.3...tsparticles-demo@1.27.4) (2022-03-20)
+
+**Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
+## [1.27.3](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.27.2...tsparticles-demo@1.27.3) (2022-03-18)
+
+**Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
+## [1.27.2](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.27.1...tsparticles-demo@1.27.2) (2022-03-14)
+
+**Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
+## [1.27.1](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.27.0...tsparticles-demo@1.27.1) (2022-03-09)
+
+**Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
+# [1.27.0](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.26.6...tsparticles-demo@1.27.0) (2022-03-08)
+
+
+### Features
+
+* added outside and inside movement to out modes ([8d648e2](https://github.com/matteobruni/tsparticles/commit/8d648e2876249d8acd6b5e5a56455200ab03f117))
+* created and implemented move plugins ([752483a](https://github.com/matteobruni/tsparticles/commit/752483aeeb94dd851dc27fe75e4c258fd87f0a90))
+* fixed firefly and fireworks presets ([ec952c9](https://github.com/matteobruni/tsparticles/commit/ec952c9ac0b42dc1c5350279a44a1255ca1f4fca))
+* fixed fountain presets ([3b47867](https://github.com/matteobruni/tsparticles/commit/3b478673153181396446f510d7ca5ad09abfcd4f))
+* splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
+* more rangeable options ([a2598c0](https://github.com/matteobruni/tsparticles/commit/a2598c07e968ab383c0a1eb311e22c4a0f52d9b8))
+
+
+
+
+
+## [1.26.6](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.26.5...tsparticles-demo@1.26.6) (2022-03-03)
+
+**Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
+## [1.26.5](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.26.4...tsparticles-demo@1.26.5) (2022-02-24)
+
+
+### Bug Fixes
+
+* fixed emitters issues ([c9d9a51](https://github.com/matteobruni/tsparticles/commit/c9d9a51e41fdc77a9bf544a09d979d8c2f6b10d5))
+
+
+
+
+
+## [2.0.1](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@2.0.0...tsparticles-demo@2.0.1) (2022-02-15)
+## [1.26.4](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.26.3...tsparticles-demo@1.26.4) (2022-02-20)
+
+**Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
+# [2.0.0](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.26.1...tsparticles-demo@2.0.0) (2022-02-15)
+
+
+### Features
+
+* added outside and inside movement to out modes ([8d648e2](https://github.com/matteobruni/tsparticles/commit/8d648e2876249d8acd6b5e5a56455200ab03f117))
+* created and implemented move plugins ([752483a](https://github.com/matteobruni/tsparticles/commit/752483aeeb94dd851dc27fe75e4c258fd87f0a90))
+* fixed firefly and fireworks presets ([ec952c9](https://github.com/matteobruni/tsparticles/commit/ec952c9ac0b42dc1c5350279a44a1255ca1f4fca))
+* fixed fountain presets ([3b47867](https://github.com/matteobruni/tsparticles/commit/3b478673153181396446f510d7ca5ad09abfcd4f))
+* splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
+
+
+
+
+
+# [2.0.0-beta.5](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.24.2...tsparticles-demo@2.0.0-beta.5) (2022-01-30)
+## [1.26.3](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.26.2...tsparticles-demo@1.26.3) (2022-02-19)
+
+
+### Bug Fixes
+
+* fixed issue with size and opacity updaters ([f81e228](https://github.com/matteobruni/tsparticles/commit/f81e2280e3cff3942bdd8037df658b169d07ed30))
+
+
+
+
+
+## [1.26.2](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.26.1...tsparticles-demo@1.26.2) (2022-02-16)
+
+
+### Bug Fixes
+
+* fixed tilt back/front colors ([657585f](https://github.com/matteobruni/tsparticles/commit/657585f22d7fefa95df1cde16d6c68522fcfb34b))
+
+
+
+
+
+## [1.26.1](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.26.0...tsparticles-demo@1.26.1) (2022-02-14)
+
+**Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
+# [1.26.0](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.25.2...tsparticles-demo@1.26.0) (2022-02-10)
+
+**Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
+## [1.25.2](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.25.1...tsparticles-demo@1.25.2) (2022-02-07)
+
+**Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
+## [1.25.1](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.25.0...tsparticles-demo@1.25.1) (2022-02-06)
+
+**Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
+# [1.25.0](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.24.3...tsparticles-demo@1.25.0) (2022-02-04)
+
+
+### Features
+
+* added domId property to Emitters options ([9408d14](https://github.com/matteobruni/tsparticles/commit/9408d148138e0bacea6d2e426c885a66c625e1a6))
+
+
+
+
+
+## [1.24.3](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.24.2...tsparticles-demo@1.24.3) (2022-02-02)
+
+
+### Features
+
+* added outside and inside movement to out modes ([8d648e2](https://github.com/matteobruni/tsparticles/commit/8d648e2876249d8acd6b5e5a56455200ab03f117))
+* created and implemented move plugins ([752483a](https://github.com/matteobruni/tsparticles/commit/752483aeeb94dd851dc27fe75e4c258fd87f0a90))
+* fixed firefly and fireworks presets ([ec952c9](https://github.com/matteobruni/tsparticles/commit/ec952c9ac0b42dc1c5350279a44a1255ca1f4fca))
+* fixed fountain presets ([3b47867](https://github.com/matteobruni/tsparticles/commit/3b478673153181396446f510d7ca5ad09abfcd4f))
+* splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
+* updated fpsLimit default value to 120 build: updated all presets to have a fpsLimit of 120 ([d1eff05](https://github.com/matteobruni/tsparticles/commit/d1eff050224c4d65727c0abc3f100d70d3807eb8))
+
+
+
+
+
+# [2.0.0-beta.4](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@2.0.0-beta.3...tsparticles-demo@2.0.0-beta.4) (2021-12-07)
+## [1.24.2](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.24.1...tsparticles-demo@1.24.2) (2022-01-29)
+
+**Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
+## [1.24.1](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.24.0...tsparticles-demo@1.24.1) (2022-01-26)
+
+**Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
+# [1.24.0](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.23.0...tsparticles-demo@1.24.0) (2022-01-08)
+
+
+### Features
+
+* improved image loading, now if an image is missing it will be loaded at runtime ([5155bef](https://github.com/matteobruni/tsparticles/commit/5155bef24ef3e3fa5ba4654361aabaab074c9957))
+
+
+
+
+
+# [1.23.0](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.22.6...tsparticles-demo@1.23.0) (2021-12-29)
+
+**Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
+## [1.22.6](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.22.5...tsparticles-demo@1.22.6) (2021-12-24)
+
+**Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
+# [2.0.0-beta.3](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.22.5...tsparticles-demo@2.0.0-beta.3) (2021-12-04)
+
+
+### Features
+
+* added outside and inside movement to out modes ([8d648e2](https://github.com/matteobruni/tsparticles/commit/8d648e2876249d8acd6b5e5a56455200ab03f117))
+* fixed firefly and fireworks presets ([ec952c9](https://github.com/matteobruni/tsparticles/commit/ec952c9ac0b42dc1c5350279a44a1255ca1f4fca))
+* fixed fountain presets ([3b47867](https://github.com/matteobruni/tsparticles/commit/3b478673153181396446f510d7ca5ad09abfcd4f))
+* splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
+
+
+
+
+
+# [2.0.0-beta.2](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.20.4...tsparticles-demo@2.0.0-beta.2) (2021-10-06)
+
+
+### Features
+
+* fixed firefly and fireworks presets ([ec952c9](https://github.com/matteobruni/tsparticles/commit/ec952c9ac0b42dc1c5350279a44a1255ca1f4fca))
+* fixed fountain presets ([3b47867](https://github.com/matteobruni/tsparticles/commit/3b478673153181396446f510d7ca5ad09abfcd4f))
+* splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
+## [1.22.5](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.22.4...tsparticles-demo@1.22.5) (2021-11-28)
+
+**Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
+## [1.22.4](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.22.3...tsparticles-demo@1.22.4) (2021-11-17)
+
+**Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
+## [1.22.3](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.22.2...tsparticles-demo@1.22.3) (2021-11-05)
+
+**Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
+## [1.22.2](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.22.1...tsparticles-demo@1.22.2) (2021-10-31)
+
+
+### Bug Fixes
+
+* fixes some dynamic import issues ([8ba2415](https://github.com/matteobruni/tsparticles/commit/8ba2415d52384fd4ce722110cda02c8c0db92674))
+
+
+
+
+
+## [1.22.1](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.22.0...tsparticles-demo@1.22.1) (2021-10-30)
+
+**Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
+# [1.22.0](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.21.0...tsparticles-demo@1.22.0) (2021-10-28)
+
+**Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
 # [1.21.0](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.20.4...tsparticles-demo@1.21.0) (2021-10-14)
 
 
@@ -14,9 +367,23 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+# [2.0.0-beta.1](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@2.0.0-beta.0...tsparticles-demo@2.0.0-beta.1) (2021-10-06)
 ## [1.20.4](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.20.3...tsparticles-demo@1.20.4) (2021-10-06)
 
 **Note:** Version bump only for package tsparticles-demo
+
+
+
+
+
+# [2.0.0-beta.0](https://github.com/matteobruni/tsparticles/compare/tsparticles-demo@1.20.3...tsparticles-demo@2.0.0-beta.0) (2021-10-06)
+
+
+### Features
+
+* fixed firefly and fireworks presets ([ec952c9](https://github.com/matteobruni/tsparticles/commit/ec952c9ac0b42dc1c5350279a44a1255ca1f4fca))
+* fixed fountain presets ([3b47867](https://github.com/matteobruni/tsparticles/commit/3b478673153181396446f510d7ca5ad09abfcd4f))
+* splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
 
 
 

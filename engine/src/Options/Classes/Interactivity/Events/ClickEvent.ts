@@ -1,7 +1,8 @@
+import { ClickMode } from "../../../../Enums/Modes/ClickMode";
 import type { IClickEvent } from "../../../Interfaces/Interactivity/Events/IClickEvent";
-import { ClickMode } from "../../../../Enums";
-import type { RecursivePartial, SingleOrMultiple } from "../../../../Types";
 import type { IOptionLoader } from "../../../Interfaces/IOptionLoader";
+import type { RecursivePartial } from "../../../../Types/RecursivePartial";
+import type { SingleOrMultiple } from "../../../../Types/SingleOrMultiple";
 
 /**
  * [[include:Options/Interactivity/Click.md]]
@@ -24,7 +25,7 @@ export class ClickEvent implements IClickEvent, IOptionLoader<IClickEvent> {
     }
 
     load(data?: RecursivePartial<IClickEvent>): void {
-        if (data === undefined) {
+        if (!data) {
             return;
         }
 

@@ -1,32 +1,16 @@
-import type { ISourceOptions } from "tsparticles";
+import type { ISourceOptions } from "tsparticles-engine";
 import { curvesPathName } from "tsparticles-path-curves";
 
 export const presetName = "seaAnemone";
 export const pathGeneratorName = `${presetName}Path`;
 
 export const options: ISourceOptions = {
-    fullScreen: {
-        enable: true,
-    },
-    fpsLimit: 60,
-    interactivity: {
-        detectsOn: "canvas",
-        events: {
-            resize: true,
-        },
-    },
+    fpsLimit: 120,
     particles: {
         color: {
             value: "#FF0000",
         },
         move: {
-            attract: {
-                enable: false,
-                rotate: {
-                    x: 2000,
-                    y: 2000,
-                },
-            },
             direction: "none",
             enable: true,
             outModes: {
@@ -50,10 +34,6 @@ export const options: ISourceOptions = {
             },
         },
         number: {
-            density: {
-                enable: true,
-                area: 800,
-            },
             value: 0,
             limit: 300,
         },
@@ -64,12 +44,11 @@ export const options: ISourceOptions = {
             type: "circle",
         },
         size: {
-            value: 10,
+            value: { min: 1, max: 10 },
             animation: {
                 count: 1,
                 startValue: "min",
                 enable: true,
-                minimumValue: 1,
                 speed: 10,
                 sync: true,
             },

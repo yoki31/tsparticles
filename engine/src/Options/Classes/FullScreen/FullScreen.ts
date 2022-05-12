@@ -1,6 +1,6 @@
 import type { IFullScreen } from "../../Interfaces/FullScreen/IFullScreen";
 import type { IOptionLoader } from "../../Interfaces/IOptionLoader";
-import type { RecursivePartial } from "../../../Types";
+import type { RecursivePartial } from "../../../Types/RecursivePartial";
 
 /**
  * The options to set the particles in the background using CSS `fixed` position
@@ -24,8 +24,8 @@ export class FullScreen implements IFullScreen, IOptionLoader<IFullScreen> {
     zIndex;
 
     constructor() {
-        this.enable = false;
-        this.zIndex = -1;
+        this.enable = true;
+        this.zIndex = 0;
     }
 
     load(data?: RecursivePartial<IFullScreen>): void {

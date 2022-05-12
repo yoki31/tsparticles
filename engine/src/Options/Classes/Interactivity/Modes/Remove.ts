@@ -1,6 +1,6 @@
-import type { IRemove } from "../../../Interfaces/Interactivity/Modes/IRemove";
-import type { RecursivePartial } from "../../../../Types";
 import type { IOptionLoader } from "../../../Interfaces/IOptionLoader";
+import type { IRemove } from "../../../Interfaces/Interactivity/Modes/IRemove";
+import type { RecursivePartial } from "../../../../Types/RecursivePartial";
 
 /**
  * @category Options
@@ -30,7 +30,7 @@ export class Remove implements IRemove, IOptionLoader<IRemove> {
     }
 
     load(data?: RecursivePartial<IRemove>): void {
-        if (data === undefined) {
+        if (!data) {
             return;
         }
 

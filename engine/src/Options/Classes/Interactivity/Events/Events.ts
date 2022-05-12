@@ -1,9 +1,10 @@
-import type { IEvents } from "../../../Interfaces/Interactivity/Events/IEvents";
 import { ClickEvent } from "./ClickEvent";
 import { DivEvent } from "./DivEvent";
 import { HoverEvent } from "./HoverEvent";
-import type { RecursivePartial, SingleOrMultiple } from "../../../../Types";
+import type { IEvents } from "../../../Interfaces/Interactivity/Events/IEvents";
 import type { IOptionLoader } from "../../../Interfaces/IOptionLoader";
+import type { RecursivePartial } from "../../../../Types/RecursivePartial";
+import type { SingleOrMultiple } from "../../../../Types/SingleOrMultiple";
 
 /**
  * [[include:Options/Interactivity/Events.md]]
@@ -74,7 +75,7 @@ export class Events implements IEvents, IOptionLoader<IEvents> {
     }
 
     load(data?: RecursivePartial<IEvents>): void {
-        if (data === undefined) {
+        if (!data) {
             return;
         }
 

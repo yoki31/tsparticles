@@ -1,7 +1,6 @@
-import type { ISourceOptions, RecursivePartial } from "tsparticles";
-import { InteractivityDetect } from "tsparticles";
-import { IConfettiOptions } from "./IConfettiOptions";
+import type { ISourceOptions, RecursivePartial } from "tsparticles-engine";
 import { ConfettiOptions } from "./ConfettiOptions";
+import type { IConfettiOptions } from "./IConfettiOptions";
 
 export const loadOptions = (confettiOptions: RecursivePartial<IConfettiOptions>): ISourceOptions => {
     const actualOptions = new ConfettiOptions();
@@ -13,7 +12,7 @@ export const loadOptions = (confettiOptions: RecursivePartial<IConfettiOptions>)
             enable: true,
             zIndex: actualOptions.zIndex,
         },
-        fpsLimit: 60,
+        fpsLimit: 120,
         particles: {
             number: {
                 value: 0,
@@ -25,10 +24,9 @@ export const loadOptions = (confettiOptions: RecursivePartial<IConfettiOptions>)
                 type: actualOptions.shapes,
             },
             opacity: {
-                value: 1,
+                value: { min: 0, max: 1 },
                 animation: {
                     enable: true,
-                    minimumValue: 0,
                     speed: 0.5,
                     startValue: "max",
                     destroy: "min",
@@ -112,12 +110,6 @@ export const loadOptions = (confettiOptions: RecursivePartial<IConfettiOptions>)
                     min: -15,
                     max: 15,
                 },
-            },
-        },
-        interactivity: {
-            detectsOn: InteractivityDetect.window,
-            events: {
-                resize: true,
             },
         },
         detectRetina: true,

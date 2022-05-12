@@ -1,9 +1,9 @@
-import { TiltAnimation } from "./TiltAnimation";
-import { TiltDirection, TiltDirectionAlt } from "../../../../Enums";
-import type { RecursivePartial } from "../../../../Types";
+import { TiltDirection, TiltDirectionAlt } from "../../../../Enums/Directions/TiltDirection";
 import type { IOptionLoader } from "../../../Interfaces/IOptionLoader";
-import { ValueWithRandom } from "../../ValueWithRandom";
 import type { ITilt } from "../../../Interfaces/Particles/Tilt/ITilt";
+import type { RecursivePartial } from "../../../../Types/RecursivePartial";
+import { TiltAnimation } from "./TiltAnimation";
+import { ValueWithRandom } from "../../ValueWithRandom";
 
 /**
  * [[include:Options/Particles/Rotate.md]]
@@ -23,11 +23,11 @@ export class Tilt extends ValueWithRandom implements ITilt, IOptionLoader<ITilt>
     }
 
     load(data?: RecursivePartial<ITilt>): void {
+        super.load(data);
+
         if (!data) {
             return;
         }
-
-        super.load(data);
 
         this.animation.load(data.animation);
 
